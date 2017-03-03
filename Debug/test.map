@@ -1,0 +1,157 @@
+******************************************************************************
+               TMS320C6x Linker PC v7.4.4                      
+******************************************************************************
+>> Linked Mon Jul 18 10:35:55 2016
+
+OUTPUT FILE NAME:   <test.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00900d00
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  L2RAMP                00800000   00100000  00000000  00100000  RWIX
+  L2RAM                 00900000   00200000  00000e20  001ff1e0  RWIX
+  L1PRAM                00e00000   00008000  00000000  00008000  RWIX
+  L1DRAM                00f00000   00008000  00000000  00008000  RWIX
+  EMIFA_CE2             a0000000   00800000  00000000  00800000  RWIX
+  EMIFA_CE3l            b0000000   00020000  00000000  00020000  RWIX
+  EMIFA_CE3p            b0020000   00100000  00000000  00100000  RWIX
+  EMIFA_CE4             c0000000   00800000  00000000  00800000  RWIX
+  EMIFA_CE5             d0000000   00800000  00000000  00800000  RWIX
+  DDR2_CE0              e0000000   20000000  00000000  20000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.pinit     0    00900000    00000000     UNINITIALIZED
+
+.stack     0    00900000    00000800     UNINITIALIZED
+                  00900000    00000008     rts64plus.lib : boot.obj (.stack)
+                  00900008    000007f8     --HOLE--
+
+.bss       0    00900000    00000000     UNINITIALIZED
+
+.data      0    00900000    00000000     UNINITIALIZED
+
+.text      0    00900800    000005e0     
+                  00900800    000001e0     main.obj (.text)
+                  009009e0    000000c0     rts64plus.lib : autoinit.obj (.text:__auto_init)
+                  00900aa0    000000c0                   : exit.obj (.text:_exit)
+                  00900b60    000000a0                   : cpy_tbl.obj (.text:_copy_in)
+                  00900c00    000000a0                   : memcpy64.obj (.text:_memcpy)
+                  00900ca0    00000060                   : cpp_init.obj (.text:___TI_cpp_init)
+                  00900d00    00000060                   : boot.obj (.text:_c_int00)
+                  00900d60    00000040                   : args_main.obj (.text:__args_main)
+                  00900da0    00000020                   : exit.obj (.text:_abort)
+                  00900dc0    00000020     testPair.obj (.text)
+
+.cinit     0    00900de0    00000034     
+                  00900de0    0000002c     rts64plus.lib : exit.obj (.cinit)
+                  00900e0c    00000004     --HOLE-- [fill = 0]
+                  00900e10    00000004     (.pad.cinit) [fill = 0]
+
+.far       0    00900e14    0000000c     UNINITIALIZED
+                  00900e14    0000000c     rts64plus.lib : exit.obj (.far)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00900000   $bss
+00900000   .bss
+00900000   .data
+00900800   .text
+00900da0   C$$EXIT
+00900800   __STACK_END
+00000800   __STACK_SIZE
+00000001   __TI_args_main
+00900ca0   ___TI_cpp_init
+00900e1c   ___TI_enable_exit_profile_output
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+00900000   ___bss__
+ffffffff   ___c_args__
+00900de0   ___cinit__
+00900000   ___data__
+00900000   ___edata__
+00900000   ___end__
+00900de0   ___etext__
+ffffffff   ___pinit__
+00900800   ___text__
+00900d60   __args_main
+009009e0   __auto_init
+00900e14   __cleanup_ptr
+00900e18   __dtors_ptr
+00900000   __stack
+00900da0   _abort
+UNDEFED    _asmpair
+00900d00   _c_int00
+00900b60   _copy_in
+00900aa0   _exit
+00900800   _main
+00900c00   _memcpy
+00900dc0   asmpair
+ffffffff   binit
+00900de0   cinit
+00900000   edata
+00900000   end
+00900de0   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000001   __TI_args_main
+00000800   __STACK_SIZE
+00900000   $bss
+00900000   .bss
+00900000   .data
+00900000   ___bss__
+00900000   ___data__
+00900000   ___edata__
+00900000   ___end__
+00900000   __stack
+00900000   edata
+00900000   end
+00900800   .text
+00900800   __STACK_END
+00900800   ___text__
+00900800   _main
+009009e0   __auto_init
+00900aa0   _exit
+00900b60   _copy_in
+00900c00   _memcpy
+00900ca0   ___TI_cpp_init
+00900d00   _c_int00
+00900d60   __args_main
+00900da0   C$$EXIT
+00900da0   _abort
+00900dc0   asmpair
+00900de0   ___cinit__
+00900de0   ___etext__
+00900de0   cinit
+00900de0   etext
+00900e14   __cleanup_ptr
+00900e18   __dtors_ptr
+00900e1c   ___TI_enable_exit_profile_output
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+UNDEFED    _asmpair
+
+[42 symbols]

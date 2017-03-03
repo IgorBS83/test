@@ -1,0 +1,1 @@
+"./testPair.obj" "./main.obj" "./Loader.obj" "../C6455.cmd" -l"libc.a" -lcsl_c6455.lib 
